@@ -1,0 +1,156 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    background-image: linear-gradient(to right, rgba(198, 114, 188, 0.638) , yellow);
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.box {
+    width: 300px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #000;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.selected {
+    border: 3px solid red;
+    box-shadow: 0px 0px 10px red;
+}
+
+.expanded {
+    width: 300px;
+    height: 220px;
+    background-color: rgb(233, 214, 179);
+}
+
+/* Box Header */
+.box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+}
+
+.expanded .box-header {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pair-label {
+    color: black;
+}
+
+.discount-label {
+    color: red;
+}
+
+.price-label {
+    color: green;
+    font-weight: bold;
+}
+
+/* Box Label */
+.box p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.expanded p {
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+
+/* Dropdown Container */
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    position: absolute;
+    bottom: 80px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.expanded .controls {
+    opacity: 1;
+}
+
+/* Dropdown Styling */
+.dropdown-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    cursor: pointer;
+}
+
+/* Total Price Box */
+.total-box {
+    margin-top: 20px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    border: 2px solid black;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: white;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-to-cart:hover {
+    background-color: darkgreen;
+}

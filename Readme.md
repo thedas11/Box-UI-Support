@@ -1,0 +1,1 @@
+This is a simple Box UI with different sizes and colos dropdown and a price section and a button for add to cart
