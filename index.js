@@ -1,20 +1,17 @@
-const boxes = document.querySelectorAll(".box");
-        const radios = document.querySelectorAll("input[type='radio']");
-        const totalBox = document.querySelector(".total-box");
-
-        boxes.forEach((box, index) => {
-            box.addEventListener("click", () => {
-                // Reset all boxes
-                boxes.forEach(b => {
-                    b.classList.remove("selected", "expanded");
-                });
-
-                // Expand and select current box
-                box.classList.add("selected", "expanded");
-                radios[index].checked = true;
-
-                // Update total price
-                let price = box.getAttribute("data-price");
-                totalBox.textContent = `Total Price: $${price} USD`;
-            });
-        });
+function updatePrice(price) {
+    document.getElementById('total-price').innerText = `$${price}.00`;
+}
+function expandBox(selectedBox) {
+    const boxes = document.querySelectorAll(".box");
+    boxes.forEach(box => {
+        if (box === selectedBox) {
+            box.style.maxHeight = "500px";
+            box.style.overflow = "visible";
+            box.style.backgroundColor = "#aaf0d1";
+        } else {
+            box.style.maxHeight = "50px";
+            box.style.overflow = "hidden";
+            box.style.backgroundColor = "#ffffff"
+        }
+    });
+}

@@ -7,131 +7,65 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="box-container">
-        <div class="box" id="box1" data-price="10">
-            <div class="box-header">
-                <input type="radio" name="boxSelect" value="box1">
-                <span class="pair-label">Pair 1</span>
-                <span class="discount-label">50% Off</span>
-                <span class="price-label">$10 USD</span>
+    <h2>YAY! It's BOGO</h2>
+    
+    <div class="container">
+        <div class="box" onclick="expandBox(this)">
+            <div class="header">
+                <input type="radio" name="product" onclick="updatePrice(10)">
+                <h3>1 Pair <span class="discount">10% Off</span></h3>
+                <span>$10.00</span>
             </div>
-            <div class="controls">
-                <div class="dropdown-group">
-                    <label>#1 Size:</label>
-                    <select>
-                        <option>Small</option>
-                        <option>Medium</option>
-                        <option>Large</option>
-                    </select>
-                    <label>Color:</label>
-                    <select>
-                        <option>White</option>
-                        <option>Blue</option>
-                        <option>Green</option>
-                    </select>
-                </div>
-                <div class="dropdown-group">
-                    <label>#2 Size:</label>
-                    <select>
-                        <option>Small</option>
-                        <option>Medium</option>
-                        <option>Large</option>
-                    </select>
-                    <label>Color:</label>
-                    <select>
-                        <option>White</option>
-                        <option>Blue</option>
-                        <option>Green</option>
-                    </select>
-                </div>
+            <div class="dropdowns-text"><p>Size</p><p class="color">Color</p></div>
+
+            <div class="dropdowns">
+                <p>#1</p>  <select><option>S</option><option>M</option><option>L</option></select>
+                <select><option>Black</option><option>Red</option><option>Blue</option></select>
+            </div>
+            <div class="dropdowns">
+                <p>#2</p>  <select><option>S</option><option>M</option><option>L</option></select>
+                <select><option>Black</option><option>Red</option><option>Blue</option></select>
             </div>
         </div>
-
-        <div class="box" id="box2" data-price="18">
-            <div class="box-header">
-                <input type="radio" name="boxSelect" value="box2">
-                <span class="pair-label">Pair 2</span>
-                <span class="discount-label">50% Off</span>
-                <span class="price-label">$18 USD</span>
+    
+        <div class="box" onclick="expandBox(this)">
+            <span class="most-popular">Most Popular</span>
+            <div class="header">
+                <input type="radio" name="product" onclick="updatePrice(18)">
+                <h3 >2 Pairs <span class="discount">20% Off</span></h3>
+                <span>$18.00</span>
             </div>
-            <div class="controls">
-                <div class="dropdown-group">
-                    <label>#1 Size:</label>
-                    <select>
-                        <option>Small</option>
-                        <option>Medium</option>
-                        <option>Large</option>
-                    </select>
-                    <label>Color:</label>
-                    <select>
-                        <option>White</option>
-                        <option>Blue</option>
-                        <option>Green</option>
-                    </select>
-                </div>
-                <div class="dropdown-group">
-                    <label>#2 Size:</label>
-                    <select>
-                        <option>Small</option>
-                        <option>Medium</option>
-                        <option>Large</option>
-                    </select>
-                    <label>Color:</label>
-                    <select>
-                        <option>White</option>
-                        <option>Blue</option>
-                        <option>Green</option>
-                    </select>
-                </div>
+            <div class="dropdowns-text"><p>Size</p><p class="color">Color</p></div>
+
+            <div class="dropdowns">
+               <p>#1</p> <select><option>S</option><option>M</option><option>L</option></select>
+                <select><option>Black</option><option>Red</option><option>Blue</option></select>
+            </div>
+            <div class="dropdowns">
+                <p>#2</p><select><option>S</option><option>M</option><option>L</option></select>
+                <select><option>Black</option><option>Red</option><option>Blue</option></select>
             </div>
         </div>
-
-        <div class="box" id="box3" data-price="24">
-            <div class="box-header">
-                <input type="radio" name="boxSelect" value="box3">
-                <span class="pair-label">Pair 3</span>
-                <span class="discount-label">50% Off</span>
-                <span class="price-label">$24 USD</span>
+    
+        <div class="box" onclick="expandBox(this)">
+            <div class="header">
+                <input type="radio" name="product" onclick="updatePrice(24)">
+                <h3>3 Pairs <span class="discount">30% Off</span></h3>
+                <span>$24.00</span>
             </div>
-            <div class="controls">
-                <div class="dropdown-group">
-                    <label>#1 Size:</label>
-                    <select>
-                        <option>Small</option>
-                        <option>Medium</option>
-                        <option>Large</option>
-                    </select>
-                    <label> Color:</label>
-                    <select>
-                        <option>White</option>
-                        <option>Blue</option>
-                        <option>Green</option>
-                    </select>
-                </div>
-                <div class="dropdown-group">
-                    <label>#2 Size:</label>
-                    <select>
-                        <option>Small</option>
-                        <option>Medium</option>
-                        <option>Large</option>
-                    </select>
-                    <label> Color:</label>
-                    <select>
-                        <option>White</option>
-                        <option>Blue</option>
-                        <option>Green</option>
-                    </select>
-                </div>
+            <div class="dropdowns-text"><p>Size</p><p class="color">Color</p></div>
+            <div class="dropdowns">
+                <p>#1</p>  <select><option>S</option><option>M</option><option>L</option></select>
+                <select><option>Black</option><option>Red</option><option>Blue</option></select>
+            </div>
+            <div class="dropdowns">
+                <p>#2</p>  <select><option>S</option><option>M</option><option>L</option></select>
+                <select><option>Black</option><option>Red</option><option>Blue</option></select>
             </div>
         </div>
     </div>
-
-    <!-- Total Price Box -->
-    <div class="total-box">
-        Total Price: $0 USD
-    </div>
-
-    <!-- Add to Cart Button -->
+    
+    <div class="price-box">Total: <span id="total-price">$0.00</span></div>
     <button class="add-to-cart">+ Add to Cart</button>
     <script src="index.js"></script>
   </body>
